@@ -18,9 +18,8 @@ function solution(number){
       multiplesArray.push(i);
     }
   }
-  console.log(multiplesArray);
+  
   let sum = 0;
   multiplesArray.forEach(num => sum += num);
   return sum;
 }
-console.log('solution: ',solution(10));
