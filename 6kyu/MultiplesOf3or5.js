@@ -1,11 +1,12 @@
 function solution(number){
   // return 0 for negative number
-  if (number <= 0) {
+  // return 0 for numbers less than 3 (no multiples of 3 below 3)
+  if (number <= 3) {
     return 0;
   }
 
+  const multiplesArray = [];
   for (let i = 1; i < number; i++) {
-    const multiplesArray = [];
     // find multiples of 5 & 3
     if (i % 5 === 0 && i % 3 === 0) {
       multiplesArray.push(i);
@@ -16,8 +17,10 @@ function solution(number){
       // find multiples of 3
       multiplesArray.push(i);
     }
-    console.log(multiplesArray);
   }
-  // return sum of all multiples
+  console.log(multiplesArray);
+  let sum = 0;
+  multiplesArray.forEach(num => sum += num);
+  return sum;
 }
-console.log('solution: ',solution(0));
+console.log('solution: ',solution(10));
