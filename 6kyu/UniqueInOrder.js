@@ -12,12 +12,9 @@ const uniqueInOrder = iterable => {
 
   if (Array.isArray(iterable)) {
     return makeUniqueArray(iterable);
+  } else if (typeof iterable === 'string') {
+    return makeUniqueArray(iterable.split(''));
   }
-
-  if (typeof iterable === 'string') {
-    
-  }
-  return uniqueArray;
-}
-
-console.log(uniqueInOrder([1,2,2,3,3]));
+  
+  return undefined;
+};
