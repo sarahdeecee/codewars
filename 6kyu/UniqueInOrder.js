@@ -1,3 +1,15 @@
 const uniqueInOrder = iterable => {
-  //your code here - remember iterable can be a string or an array
+  if (Array.isArray(iterable)) {
+    const uniqueArray = [];
+    iterable.forEach((item, index) => {
+      if (iterable[index - 1] != item) {
+        uniqueArray.push(item);
+      }
+    })
+    return uniqueArray;
+  } else if (typeof iterable === 'string') {
+
+  } else {
+    return undefined;
+  }
 }
