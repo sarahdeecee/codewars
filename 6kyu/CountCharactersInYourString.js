@@ -12,6 +12,3 @@ function count(string) {
 
   return count;
 }
-
-console.log(count('aba')); //{'a': 2, 'b': 1}
-console.log(count('ABC')); //{'A': 1, 'B': 1, 'C': 1}
